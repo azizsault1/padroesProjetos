@@ -1,5 +1,7 @@
 package padroesProjetos.creation;
 
+import padroesProjetos.creation.abstractfactories.Configuration;
+import padroesProjetos.creation.abstractfactories.Configuration.UniqueConfiguration;
 import padroesProjetos.creation.abstractfactories.DatabaseAbstractFactory;
 import padroesProjetos.creation.abstractfactories.DatabaseAbstractFactory.Db;
 import padroesProjetos.creation.abstractfactories.filecondfiguration.FileConfiguration;
@@ -24,6 +26,12 @@ public class Client {
       System.out.println("Client.main()" + sqlServer.getHost());
       queueConfiguration.setHost("NewHost2");
       System.out.println("Client.main()" + sqlServer.getHost());
+
+      final UniqueConfiguration configuration = Configuration.UniqueConfiguration.INSTANCE;
+      configuration.setHost("UniqueHost");
+      configuration.setUser("UniquePass");
+      configuration.setPass("UniquePass");
+      configuration.setPort("UniquePort");
 
    }
 }

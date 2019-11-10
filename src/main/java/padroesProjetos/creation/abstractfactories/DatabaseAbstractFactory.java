@@ -20,4 +20,5 @@ public interface DatabaseAbstractFactory {
    public static DatabaseAbstractFactory create(final QueueConfiguration queueConfiguration) {
       return new QueueConfigurationDatabase(queueConfiguration);
    }
+
 }

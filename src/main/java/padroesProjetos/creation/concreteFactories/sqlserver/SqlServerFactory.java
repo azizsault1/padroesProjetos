@@ -11,7 +11,7 @@ public class SqlServerFactory implements Factory {
       return new SQLServerDatabase(configuration);
    }
 
-   public class SQLServerDatabase implements Database {
+   class SQLServerDatabase implements Database {
       private final Configuration configuration;
 
       public SQLServerDatabase(final Configuration configuration) {

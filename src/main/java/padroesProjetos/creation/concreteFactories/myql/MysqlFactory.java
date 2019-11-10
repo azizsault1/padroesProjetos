@@ -15,7 +15,7 @@ public class MysqlFactory implements Factory {
       return new MysqlDatabase(user, pass, port, host);
    }
 
-   public class MysqlDatabase implements Database {
+   class MysqlDatabase implements Database {
       private final String user;
       private final String pass;
       private final String port;
