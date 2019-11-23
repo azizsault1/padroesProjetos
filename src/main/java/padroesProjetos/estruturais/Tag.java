@@ -23,14 +23,6 @@ abstract class Tag {
 
    protected abstract String toHTML();
 
-   protected String fecharTag() {
-      final StringBuilder result = new StringBuilder(MENOR);
-      result.append(BARRA);
-      result.append(this.getTagName());
-      result.append(MAIOR);
-      return result.toString();
-   }
-
    protected StringBuilder abrirTag() {
       final StringBuilder result = new StringBuilder(MENOR);
       result.append(this.getTagName());
@@ -39,6 +31,14 @@ abstract class Tag {
       });
       result.append(MAIOR);
       return result;
+   }
+
+   protected String fecharTag() {
+      final StringBuilder result = new StringBuilder(MENOR);
+      result.append(BARRA);
+      result.append(this.getTagName());
+      result.append(MAIOR);
+      return result.toString();
    }
 
 }
