@@ -1,13 +1,13 @@
 package padroesProjetos.estruturais;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class SpanTest {
+public class SpanTest {
 
    @Test
-   void test() {
+   public void test() {
       final Span span = new Span("meu texto estiloso!");
       final Italico italico = new Italico(span);
       final Negrito negrito = new Negrito(italico);
@@ -16,7 +16,7 @@ class SpanTest {
    }
 
    @Test
-   void spanComAtributos() {
+   public void spanComAtributos() {
       final Span span = new Span("meu texto estiloso!");
       span.addAttribute("class", "banana");
       final Italico italico = new Italico(span);
@@ -26,7 +26,7 @@ class SpanTest {
    }
 
    @Test
-   void comDoisAtributos() {
+   public void comDoisAtributos() {
       final Span span = new Span("meu texto estiloso!");
       span.addAttribute("class", "banana");
       span.addAttribute("teste", "teste2");
@@ -37,7 +37,7 @@ class SpanTest {
    }
 
    @Test
-   void enfase() {
+   public void enfase() {
       final Span span = new Span("meu texto estiloso!");
       span.addAttribute("class", "banana");
       span.addAttribute("teste", "teste2");
@@ -49,7 +49,7 @@ class SpanTest {
    }
 
    @Test
-   void ul() {
+   public void ul() {
       final Span span2 = new Span("Estou dentro do 2 li");
       final Span span = new Span("meu texto estiloso!");
       span.addAttribute("class", "banana");

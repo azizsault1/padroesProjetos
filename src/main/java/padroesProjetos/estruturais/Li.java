@@ -8,7 +8,7 @@ public class Li extends TagDecorator {
 
    @Override
    protected String getTagName() {
-      return "div";
+      return "li";
    }
 
 }

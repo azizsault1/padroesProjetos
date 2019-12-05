@@ -8,7 +8,7 @@ public class Div extends TagDecorator {
 
    @Override
    public String getTagName() {
-      return "i";
+      return "div";
    }
 
 }
